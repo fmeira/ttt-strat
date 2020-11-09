@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ttt-strat"
+    }
+  },
+  "defaultProject": "ttt-strat",
+  "cli": {
+    "analytics": false
+  }
 }

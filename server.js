@@ -9,6 +9,9 @@ app.use(parser.json());
 app.use(
   parser.urlencoded({extended: true})
 );
+// Create link to Angular build directory
+var distDir = __dirname + "/dist/";
+app.use(express.static(distDir));
 
 app.get('/updates', function(request, response) {
   response.writeHead(200, {
@@ -30,6 +33,4 @@ app.listen(3000);
 
 console.log('Express E2E mock server is running');
 
-// Create link to Angular build directory
-var distDir = __dirname + "/dist/";
-app.use(express.static(distDir));
+
